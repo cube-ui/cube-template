@@ -3,6 +3,9 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+{{#postCompile}}
+const PostCompilePlugin = require('webpack-post-compile-plugin')
+{{/postCompile}}
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -78,5 +81,9 @@ module.exports = {
         }
       }
     ]
-  }
+  }{{#postCompile}},
+  plugins: [
+    new PostCompilePlugin()
+  ]
+  {{/postCompile}}
 }

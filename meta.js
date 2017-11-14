@@ -40,6 +40,10 @@ module.exports = {
         }
       ]
     },
+    "postCompile": {
+      "type": "confirm",
+      "message": "Use post-compile?"
+    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"

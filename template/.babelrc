@@ -5,7 +5,22 @@
     }],
     "stage-2"
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": ["transform-runtime",
+    {{#postCompile }}{
+      "cube-ui": {
+        "transform": "cube-ui/src/modules/${member}",
+        "kebabCase": true
+      }
+    }{{/postCompile}}
+    {{#unless postCompile}}{
+      "cube-ui": {
+        "transform": "cube-ui/lib/${member}",
+        "kebabCase": true,
+        "style": {
+          "ignore": ["create-api", "better-scroll"]
+        }
+      }
+    }{{/postCompile}}],
   "env": {
     "test": {
       "presets": ["env", "stage-2"]{{#if_eq runner "karma"}},
