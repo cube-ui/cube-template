@@ -6,13 +6,16 @@
     "stage-2"
   ],
   "plugins": ["transform-runtime",
-    {{#postCompile }}{
+    {{#postCompile }}
+    ["transform-modules", {
       "cube-ui": {
         "transform": "cube-ui/src/modules/${member}",
         "kebabCase": true
       }
-    }{{/postCompile}}
-    {{#unless postCompile}}{
+    }]
+    {{/postCompile}}
+    {{#unless postCompile}}
+    ["transform-modules", {
       "cube-ui": {
         "transform": "cube-ui/lib/${member}",
         "kebabCase": true,
@@ -20,7 +23,8 @@
           "ignore": ["create-api", "better-scroll"]
         }
       }
-    }{{/unless}}],
+    }]{{/unless}}
+  ],
   "env": {
     "test": {
       "presets": ["env", "stage-2"]{{#if_eq runner "karma"}},
