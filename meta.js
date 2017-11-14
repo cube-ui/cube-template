@@ -44,6 +44,21 @@ module.exports = {
       "type": "confirm",
       "message": "Use post-compile?"
     },
+    "importType": {
+      "type": "list",
+      "choices": [
+        {
+          "name": "partly, import component on demand, which makes the size of imported code lighter",
+          "value": "partly",
+          "short": "Partly"
+        },
+        {
+          "name": "fully, import all the components",
+          "value": "fully",
+          "short": "Fully"
+        }
+      ]
+    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
