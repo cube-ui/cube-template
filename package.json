@@ -1,0 +1,9 @@
+{
+  "name": "vue-cli-template-cube-ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "cube-ui template base on webpack for Vue-cli",
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  }
+}
