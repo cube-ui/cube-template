@@ -20,7 +20,7 @@
           "ignore": ["create-api", "better-scroll"]
         }
       }
-    }{{/postCompile}}],
+    }{{/unless}}],
   "env": {
     "test": {
       "presets": ["env", "stage-2"]{{#if_eq runner "karma"}},
