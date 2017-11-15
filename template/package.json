@@ -27,8 +27,8 @@
   "compileDependencies": ["cube-ui"],
   {{/postCompile}}
   "dependencies": {
-    "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}
+    "vue": "^2.5.2",{{#router}}
+    "vue-router": "^3.0.1",{{/router}}
     "cube-ui":"^1.0.1"
   },
   "devDependencies": {

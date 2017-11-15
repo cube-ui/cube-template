@@ -17,6 +17,7 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <cube-button @click="showToast">show toast</cube-button>
   </div>
 </template>
 
@@ -25,8 +26,14 @@ export default {
   name: 'HelloWorld',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
-      msg: 'Welcome to Your Vue.js App'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      msg: 'Welcome to Your Vue.js App',
+      toastTxt: 'toast content'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  },
+  methods: {
+    showToast{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
+      this.$refs.toast.show(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    }
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
