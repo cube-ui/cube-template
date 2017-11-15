@@ -18,7 +18,7 @@ import {
   {{/lint}}
   {{#unless lint}}
   Style,
-  {{/lint}}
+  {{/unless}}
   Button,
   Checkbox,
   CheckboxGroup,
