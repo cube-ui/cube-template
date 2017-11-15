@@ -86,7 +86,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         // any required modules inside node_modules are extracted to vendor
         return (
           module.resource &&
-          /\.{{#postCompile}}(js|vue|styl){{/postCompile}}{{#unless postCompile}}js{{/unless}}$/.test(module.resource) &&
+          /\.{{#postCompile}}(js|vue|styl|ttf|woff){{/postCompile}}{{#unless postCompile}}js{{/unless}}$/.test(module.resource) &&
           module.resource.indexOf(
             path.join(__dirname, '../node_modules')
           ) === 0
