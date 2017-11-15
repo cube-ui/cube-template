@@ -35,7 +35,7 @@ export default {
       this.$createToast({
         txt: this.toastTxt{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       }).show(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-    }
+    }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
