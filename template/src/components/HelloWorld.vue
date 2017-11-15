@@ -27,12 +27,14 @@ export default {
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
       msg: 'Welcome to Your Vue.js App',
-      toastTxt: 'toast content'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      toastTxt: 'cube toast content'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   },
   methods: {
     showToast{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
-      this.$refs.toast.show(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+      this.$createToast({
+        txt: this.toastTxt{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      }).show(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}

@@ -29,6 +29,9 @@ module.exports = {
       {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.esm.js',
       {{/if_eq}}
+      {{#unless postCompile}}
+      'cube-ui': 'cube-ui/lib',
+      {{/unless}}
       '@': resolve('src'),
     }
   },
