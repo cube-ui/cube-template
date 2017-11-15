@@ -11,9 +11,14 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 // By default we import all the components.
 // Only reserve the components on demand and remove the rest.
 // Style is always required.
-import {{{#lint}}
+import {
+  {{#lint}}
   /* eslint-disable no-unused-vars */
-  {{/lint}}Style,
+  Style,
+  {{/lint}}
+  {{#unless lint}}
+  Style,
+  {{/lint}}
   Button,
   Checkbox,
   CheckboxGroup,
