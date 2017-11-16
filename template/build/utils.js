@@ -55,7 +55,8 @@ exports.cssLoaders = function (options) {
 
   {{#postCompile}}
   const stylusOptions = {
-    'resolve url': true
+    'resolve url': true{{#theme}},
+    import: [path.resolve(__dirname, '../src/theme')]{{/theme}}
   }
   {{/postCompile}}
 

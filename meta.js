@@ -59,6 +59,11 @@ module.exports = {
         }
       ]
     },
+    "theme": {
+      "when": "postCompile",
+      "type": "confirm",
+      "message": "Custom theme?"
+    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
@@ -130,7 +135,8 @@ module.exports = {
     "test/unit/specs/index.js": "unit && runner === 'karma'",
     "test/unit/setup.js": "unit && runner === 'jest'",
     "test/e2e/**/*": "e2e",
-    "src/router/**/*": "router"
+    "src/router/**/*": "router",
+    "src/theme.styl": "theme"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nYeah,let's make an awesome app via cube-ui!"
 };
