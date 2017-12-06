@@ -5,31 +5,33 @@
     }],
     "stage-2"
   ],
-  "plugins": ["transform-runtime",
-    {{#postCompile }}
-    ["transform-modules", {
-      "cube-ui": {
-        "transform": "cube-ui/src/modules/${member}",
-        "kebabCase": true
-      }
-    }]
-    {{/postCompile}}
-    {{#unless postCompile}}
-    ["transform-modules", {
-      "cube-ui": {
-        "transform": "cube-ui/lib/${member}",
-        "kebabCase": true,
-        "style": {
-          "ignore": ["create-api", "better-scroll"]
+  "plugins": [
+    "transform-runtime", {{#postCompile }}
+    [
+      "transform-modules", {
+        "cube-ui": {
+          "transform": "cube-ui/src/modules/${member}",
+          "kebabCase": true
         }
       }
-    }]{{/unless}}
-  ],
+    ]{{/postCompile}}{{#unless postCompile}}
+    [
+      "transform-modules", {
+        "cube-ui": {
+          "transform": "cube-ui/lib/${member}",
+          "kebabCase": true,
+          "style": {
+            "ignore": ["create-api", "better-scroll"]
+          }
+        }
+      }
+    ]{{/unless}}
+  ]{{#if_or unit e2e}},
   "env": {
     "test": {
       "presets": ["env", "stage-2"]{{#if_eq runner "karma"}},
-      "plugins": ["istanbul"]
-      {{/if_eq}}
+      "plugins": ["istanbul"]{{/if_eq}}{{#if_eq runner "jest"}},
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]{{/if_eq}}
     }
-  }
+  }{{/if_or}}
 }
