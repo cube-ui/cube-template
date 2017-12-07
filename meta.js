@@ -149,7 +149,8 @@ module.exports = {
     "test/unit/specs/index.js": "unit && runner === 'karma'",
     "test/unit/setup.js": "unit && runner === 'jest'",
     "test/e2e/**/*": "e2e",
-    "src/router/**/*": "router"
+    "src/router/**/*": "router",
+    "src/theme.styl": "theme"
   },
   "complete": function (data) {
     const packageJsonFile = path.join(
