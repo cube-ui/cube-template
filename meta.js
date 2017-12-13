@@ -76,6 +76,16 @@ module.exports = {
       "type": "confirm",
       "message": "Custom theme?"
     },
+    "rem": {
+      "when": "postCompile",
+      "type": "confirm",
+      "message": "Use rem layout?"
+    },
+    "amfeFlexible": {
+      "when": "rem",
+      "type": "confirm",
+      "message": "Use amfe-flexible?"
+    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
