@@ -30,7 +30,9 @@
   "dependencies": {
     "vue": "^2.5.2",{{#router}}
     "vue-router": "^3.0.1",{{/router}}
-    "cube-ui":"^1.1.1"
+    "cube-ui":"^1.1.1"{{#amfeFlexible}},
+    "amfe-flexible": "^2.2.1"
+    {{/amfeFlexible}}
   },
   "devDependencies": {
     {{#lint}}
@@ -123,6 +125,9 @@
     "stylus-loader": "^2.1.1",
     "webpack-post-compile-plugin": "^0.1.2",
     {{/postCompile}}
+    {{#rem}}
+    "postcss-px2rem": "^0.3.0",
+    {{/rem}}
     "babel-plugin-transform-modules":"^0.1.0"
   },
   "engines": {
