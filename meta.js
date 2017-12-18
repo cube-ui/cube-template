@@ -58,6 +58,7 @@ module.exports = {
     },
     "importType": {
       "type": "list",
+      "message": "Import type",
       "choices": [
         {
           "name": "partly, import component on demand, which makes the size of imported code lighter",
