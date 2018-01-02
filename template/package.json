@@ -128,7 +128,7 @@
     {{#rem}}
     "postcss-px2rem": "^0.3.0",
     {{/rem}}
-    "babel-plugin-transform-modules":"^0.1.0"
+    "babel-plugin-transform-modules":"^0.1.1"
   },
   "engines": {
     "node": ">= 4.0.0",
