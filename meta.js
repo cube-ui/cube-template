@@ -84,7 +84,7 @@ module.exports = {
       "default": false
     },
     "amfeFlexible": {
-      "when": "rem",
+      "when": "postCompile && rem",
       "type": "confirm",
       "message": "Use amfe-flexible?"
     },
@@ -162,7 +162,7 @@ module.exports = {
     "test/unit/setup.js": "unit && runner === 'jest'",
     "test/e2e/**/*": "e2e",
     "src/router/**/*": "router",
-    "src/theme.styl": "theme"
+    "src/theme.styl": "postCompile && theme"
   },
   "complete": function (data) {
     const packageJsonFile = path.join(
