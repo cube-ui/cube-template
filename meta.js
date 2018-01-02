@@ -80,7 +80,8 @@ module.exports = {
     "rem": {
       "when": "postCompile",
       "type": "confirm",
-      "message": "Use rem layout?"
+      "message": "Use rem layout?",
+      "default": false
     },
     "amfeFlexible": {
       "when": "rem",
