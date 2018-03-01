@@ -177,7 +177,7 @@ module.exports = {
       JSON.stringify(packageJson, null, 2) + "\n"
     );
 
-    const message = `To get started:\n\n  ${data.inPlace ? '' : `cd ${data.destDirName}\n  `}npm install\n  npm run dev\n\nYeah,let's make an awesome app via cube-ui`;
+    const message = `To get started:\n\n  ${data.inPlace ? '' : `cd ${data.destDirName}\n  `}npm install\n  npm run dev\n\nYeah,let's make an awesome app via cube-ui!`;
     console.log("\n" + message.split(/\r?\n/g).map(line => "   " + line).join("\n"));
   }
 };
