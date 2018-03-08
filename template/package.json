@@ -26,7 +26,24 @@
   },
   {{#postCompile}}
   "compileDependencies": ["cube-ui"],
+  "transformModules": {
+    "cube-ui": {
+      "transform": "cube-ui/src/modules/${member}",
+      "kebabCase": true
+    }
+  },
   {{/postCompile}}
+  {{#unless postCompile}}
+  "transformModules": {
+    "cube-ui": {
+      "transform": "cube-ui/lib/${member}",
+      "kebabCase": true,
+      "style": {
+        "ignore": ["create-api", "better-scroll"]
+      }
+    }
+  },
+  {{/unless}}
   "dependencies": {
     "vue": "^2.5.2",{{#router}}
     "vue-router": "^3.0.1",{{/router}}
@@ -123,12 +140,12 @@
     {{#postCompile}}
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
-    "webpack-post-compile-plugin": "^0.1.2",
+    "webpack-post-compile-plugin": "^0.2.1",
     {{/postCompile}}
     {{#rem}}
     "postcss-px2rem": "^0.3.0",
     {{/rem}}
-    "babel-plugin-transform-modules":"^0.1.1"
+    "webpack-transform-modules-plugin": "^0.3.1"
   },
   "engines": {
     "node": ">= 4.0.0",

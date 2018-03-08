@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const TransformModulesPlugin = require('webpack-transform-modules-plugin')
 {{#postCompile}}
 const PostCompilePlugin = require('webpack-post-compile-plugin')
 {{/postCompile}}
@@ -98,9 +99,9 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }{{#postCompile}},
+  },
   plugins: [
-    new PostCompilePlugin()
+    {{#postCompile}}new PostCompilePlugin(),
+    {{/postCompile}}new TransformModulesPlugin()
   ]
-  {{/postCompile}}
 }

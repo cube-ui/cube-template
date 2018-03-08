@@ -6,26 +6,7 @@
     "stage-2"
   ],
   "plugins": [
-    "transform-runtime", {{#postCompile }}
-    [
-      "transform-modules", {
-        "cube-ui": {
-          "transform": "cube-ui/src/modules/${member}",
-          "kebabCase": true
-        }
-      }
-    ]{{/postCompile}}{{#unless postCompile}}
-    [
-      "transform-modules", {
-        "cube-ui": {
-          "transform": "cube-ui/lib/${member}",
-          "kebabCase": true,
-          "style": {
-            "ignore": ["create-api", "better-scroll"]
-          }
-        }
-      }
-    ]{{/unless}}
+    "transform-runtime"
   ]{{#if_or unit e2e}},
   "env": {
     "test": {
