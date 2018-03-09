@@ -19,19 +19,28 @@ import {
   Style,
   {{/unless}}
   Button,
-  Checkbox,
   CheckboxGroup,
+  Radio,
+  Input,
+  Textarea,
+  Select,
+  Switch,
+  Rate,
+  Validator,
   Loading,
   Tip,
   Popup,
   Toast,
   Picker,
+  CascadePicker,
   TimePicker,
   Dialog,
   ActionSheet,
   Scroll,
   Slide,
-  IndexList{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  IndexList,
+  Swipe,
+  Upload{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 } from 'cube-ui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/if_eq}}
 {{#if_eq importType "fully"}}
@@ -44,18 +53,27 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 {{#if_eq importType "partly"}}
 Vue.use(Button){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Checkbox){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(CheckboxGroup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Radio){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Input){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Textarea){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Select){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Switch){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Rate){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Validator){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Loading){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Tip){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Toast){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Picker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(CascadePicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(TimePicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Dialog){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(ActionSheet){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Scroll){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Slide){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(IndexList){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Swipe){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Upload){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/if_eq}}
 {{#if_eq importType "fully"}}
 Vue.use(Cube){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
