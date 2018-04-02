@@ -47,7 +47,7 @@
   "dependencies": {
     "vue": "^2.5.2",{{#router}}
     "vue-router": "^3.0.1",{{/router}}
-    "cube-ui":"^1.6.1"{{#amfeFlexible}},
+    "cube-ui":"^1.7.0"{{#amfeFlexible}},
     "amfe-flexible": "^2.2.1"
     {{/amfeFlexible}}
   },
