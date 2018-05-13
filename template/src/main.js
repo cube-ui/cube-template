@@ -19,6 +19,7 @@ import {
   Style,
   {{/unless}}
   Button,
+  Toolbar,
   CheckboxGroup,
   Radio,
   Input,
@@ -57,6 +58,7 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 {{#if_eq importType "partly"}}
 Vue.use(Button){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Toolbar){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(CheckboxGroup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Radio){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Input){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
