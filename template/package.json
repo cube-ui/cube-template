@@ -51,6 +51,7 @@
     {{/amfeFlexible}}
   },
   "devDependencies": {
+    "prettier": "^1.12.1",
     {{#lint}}
     "babel-eslint": "^7.1.1",
     "eslint": "^3.19.0",
@@ -144,6 +145,9 @@
     {{#rem}}
     "postcss-px2rem": "^0.3.0",
     {{/rem}}
+    {{#vw}}
+    "postcss-px-to-viewport": "^0.0.3",
+    {{/vw}}
     "webpack-transform-modules-plugin": "^0.3.2"
   },
   "engines": {

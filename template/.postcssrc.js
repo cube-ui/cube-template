@@ -7,6 +7,15 @@ module.exports = {
     "autoprefixer": {}{{#rem}},
     "postcss-px2rem": {
       "remUnit": 37.5
-    }{{/rem}}
+    }{{/rem}}{{#vw}},
+    "postcss-px-to-viewport": {
+      "viewportWidth": 375,
+      "viewportHeight": 667,
+      "unitPrecision": 5,
+      "viewportUnit": "vw",
+      "selectorBlackList": [],
+      "minPixelValue": 1,
+      "mediaQuery": false
+    }{{/vw}}
   }
 }

@@ -88,6 +88,12 @@ module.exports = {
       "type": "confirm",
       "message": "Use amfe-flexible?"
     },
+    "vw": {
+      "when": "postCompile && !rem",
+      "type": "confirm",
+      "message": "Use vw layout?",
+      "default": false
+    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
