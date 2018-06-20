@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "cube-ui template base on webpack for Vue-cli",
   "scripts": {
+    "update": "node ./scripts/update-cube-version.js",
     "demo": "rm -rf demo && vue init ./ demo"
   },
   "devDependencies": {
