@@ -18,34 +18,46 @@ import {
   {{#unless lint}}
   Style,
   {{/unless}}
+  // basic
   Button,
+  Loading,
+  Tip,
   Toolbar,
+  TabBar,
+  TabPanels,
+  // form
+  Checkbox,
   CheckboxGroup,
   Radio,
+  RadioGroup,
   Input,
   Textarea,
   Select,
   Switch,
   Rate,
   Validator,
+  Upload,
   Form,
-  Loading,
-  Tip,
+  // popup
   Popup,
   Toast,
   Picker,
   CascadePicker,
   DatePicker,
-  SegmentPicker,
   TimePicker,
+  SegmentPicker,
   Dialog,
   ActionSheet,
   Drawer,
+  ImagePreview,
+  // scroll
   Scroll,
   Slide,
   IndexList,
   Swipe,
-  Upload{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  Sticky,
+  ScrollNav,
+  ScrollNavBar{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 } from 'cube-ui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/if_eq}}
 {{#if_eq importType "fully"}}
@@ -58,32 +70,41 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 {{#if_eq importType "partly"}}
 Vue.use(Button){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Loading){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Tip){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Toolbar){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(TabBar){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(TabPanels){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Checkbox){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(CheckboxGroup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Radio){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(RadioGroup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Input){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Textarea){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Select){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Switch){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Rate){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Validator){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Upload){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Form){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Loading){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Tip){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Popup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Toast){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Picker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(CascadePicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(DatePicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(SegmentPicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(TimePicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(SegmentPicker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Dialog){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(ActionSheet){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Drawer){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(ImagePreview){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Scroll){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Slide){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(IndexList){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Swipe){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Upload){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Sticky){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(ScrollNav){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(ScrollNavBar){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/if_eq}}
 {{#if_eq importType "fully"}}
 Vue.use(Cube){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
