@@ -140,7 +140,7 @@
     {{#postCompile}}
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
-    "webpack-post-compile-plugin": "^0.5.0",
+    "webpack-post-compile-plugin": "^0.4.1",
     {{/postCompile}}
     {{#rem}}
     "postcss-px2rem": "^0.3.0",
