@@ -57,7 +57,8 @@ import {
   Swipe,
   Sticky,
   ScrollNav,
-  ScrollNavBar{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  ScrollNavBar,
+  RecycleList{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 } from 'cube-ui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/if_eq}}
 {{#if_eq importType "fully"}}
@@ -105,6 +106,7 @@ Vue.use(Swipe){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Sticky){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(ScrollNav){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(ScrollNavBar){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(RecycleList){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/if_eq}}
 {{#if_eq importType "fully"}}
 Vue.use(Cube){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
