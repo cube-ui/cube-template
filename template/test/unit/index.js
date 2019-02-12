@@ -1,6 +1,4 @@
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Cube from 'cube-ui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-Vue.use(Cube){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
