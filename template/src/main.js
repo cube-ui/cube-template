@@ -28,6 +28,7 @@ import {
   // form
   Checkbox,
   CheckboxGroup,
+  Checker,
   Radio,
   RadioGroup,
   Input,
@@ -78,6 +79,7 @@ Vue.use(TabBar){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(TabPanels){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Checkbox){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(CheckboxGroup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+Vue.use(Checker){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Radio){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(RadioGroup){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Input){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
